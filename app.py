@@ -49,33 +49,8 @@ def makeWebhookResult(req):
         "source": "apiai-onlinestore-shipping"
     }
 
-   elif req.get("result").get("action") == "resultado":
-    result = req.get("result")
-    parameters = result.get("parameters")
-    equipo = parameters.get("equipo")
-
-    contra = {'America':'Santos', 'Chiapas':'Querétaro', 'Cruz Azul':'Guadalajara', 'Atlas':'Pachuca', 'Guadalajara':'CruzAzul', 'Queretaro':'Chiapas', 'Monterrey':'Tigres', 'Morelia':'Necaxa', 'Pachuca':'Atlas', 'Puebla':'León', 'Tijuana':'Toluca', 'Toluca':'Tijuana', 'U.A.N.L':'Rayados', 'U.N.A.M':'Veracruz', 'Veracruz':"Pumas", 'Necaxa':'Monarcas'}
-    goles = {'America':1, 'Chiapas':2, 'Cruz Azul':2, 'Atlas':1, 'Guadalajara':1, 'Queretaro':2, 'Monterrey':1, 'Morelia':1, 'Pachuca':0, 'Puebla':0, 'Tijuana':2, 'Toluca':0, 'U.A.N.L':0, 'U.N.A.M':0, 'Veracruz':2, 'Necaxa':2}
-    equipo2=contra[equipo]
-    local=goles[equipo]
-    visitante=goles[equipo2]
-    if goles[equipo] > goles[equipo2]:
-    speech = "ganó " + str(goles[equipo]) + " a " + str(goles[equipo2]) + " al" + contra[equipo]
-    elif goles[equipo] < goles[equipo2]:
-    speech = "perdió " + str(goles[equipo]) + " a " + str(goles[equipo2]) + " contra " + contra[equipo]
-    else:
-    speech = "empató " + str(goles[equipo]) + " a " + str(goles[equipo2]) + " contra " + contra[equipo]
-
-    print("Response:")
-    print(speech)
-
-    return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
-    }
+#aqui estab el codigo que quite
+  
 else:
     return {}
 

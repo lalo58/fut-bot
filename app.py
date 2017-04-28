@@ -28,7 +28,8 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "fixture":
+    if req.get("result").get("action") != "fixture":
+         return {}
     result = req.get("result")
     parameters = result.get("parameters")
     equipo = parameters.get("equipo")

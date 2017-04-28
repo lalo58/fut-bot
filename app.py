@@ -33,7 +33,7 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     equipo = parameters.get("equipo")
 
-    hora = {'America':"viernes a las 9 pm", 'Chiapas':"sabado a las 5 pm", 'Cruz Azul':"sabado a las 7 pm", 'Atlas':"viernes a las 9 pm", 'Guadalajara':"sabado a las 7 pm", 'Queretaro':"domingo a las 12 pm", 'Monterrey':"viernes a las 8 pm", 'Morelia':"sabado a las 7 pm", 'Pachuca':"sabado a las 7 pm", 'Puebla':"domingo a las 6 pm", 'Tijuana':"sabado a las 7 pm", 'Toluca':"domingo a las 12 pm", 'U.A.N.L':"sabado a las 7 pm", 'U.N.A.M':"sabado a las 7 pm", 'Veracruz':"viernes a las 8:30 pm", 'Necaxa':"domingo a las 12 pm"}
+    #hora = {'America':"viernes a las 9 pm", 'Chiapas':"sabado a las 5 pm", 'Cruz Azul':"sabado a las 7 pm", 'Atlas':"viernes a las 9 pm", 'Guadalajara':"sabado a las 7 pm", 'Queretaro':"domingo a las 12 pm", 'Monterrey':"viernes a las 8 pm", 'Morelia':"sabado a las 7 pm", 'Pachuca':"sabado a las 7 pm", 'Puebla':"domingo a las 6 pm", 'Tijuana':"sabado a las 7 pm", 'Toluca':"domingo a las 12 pm", 'U.A.N.L':"sabado a las 7 pm", 'U.N.A.M':"sabado a las 7 pm", 'Veracruz':"viernes a las 8:30 pm", 'Necaxa':"domingo a las 12 pm"}
     contra = {'America':'Atlas', 'Chiapas':'Santos', 'Cruz Azul':'Pachuca', 'Atlas':'América', 'Guadalajara':'León', 'Queretaro':'Toluca', 'Monterrey':'Veracruz', 'Pachuca':'CruzAzul', 'Puebla':'Necaxa', 'Tijuana':'Tigres', 'Toluca':'Querétaro', 'U.A.N.L':'Tijuana', 'U.N.A.M':'Morelia', 'Veracruz':"Monterrey", 'Necaxa':'Puebla'}
     
     speech = "El " + equipo + " juega el " + hora[equipo] + " contra " + contra[equipo]  

@@ -48,8 +48,7 @@ def makeWebhookResult(req):
 
 #aqui estab el codigo que quite
   
-else:
-    return {}
+
 
 
 if __name__ == '__main__':
